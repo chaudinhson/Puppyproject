@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Puppyproject/static/css/main.b3cefe47.css",
-    "main.js": "/Puppyproject/static/js/main.aed6179d.js",
+    "main.js": "/Puppyproject/static/js/main.c8a5de17.js",
     "static/js/453.42187f8a.chunk.js": "/Puppyproject/static/js/453.42187f8a.chunk.js",
     "index.html": "/Puppyproject/index.html",
     "main.b3cefe47.css.map": "/Puppyproject/static/css/main.b3cefe47.css.map",
-    "main.aed6179d.js.map": "/Puppyproject/static/js/main.aed6179d.js.map",
+    "main.c8a5de17.js.map": "/Puppyproject/static/js/main.c8a5de17.js.map",
     "453.42187f8a.chunk.js.map": "/Puppyproject/static/js/453.42187f8a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b3cefe47.css",
-    "static/js/main.aed6179d.js"
+    "static/js/main.c8a5de17.js"
   ]
 }
