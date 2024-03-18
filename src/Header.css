@@ -1,0 +1,121 @@
+.Headerbox {
+  display: flex;
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  border-bottom: 1px solid white;
+  background-color: rgb(246, 250, 226, 0.4);
+  /* backdrop-filter: blur(4px); */
+}
+.Headerbox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: 1s;
+}
+.Headerbox:hover::before {
+  left: 100%;
+}
+.backgroundbox img {
+  height: 734px;
+  width: 100%;
+}
+.backgroundbox {
+  z-index: 1;
+  border-bottom: 1.5px solid #333333;
+}
+.items {
+  position: absolute;
+  top: 220px;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+.Headerlogo {
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+.Headerlogo > * {
+  margin: auto;
+  color: white;
+  font-size: 20px;
+}
+.navbar {
+  width: 100%;
+}
+.navbar ul {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navbar ul li > * {
+  display: inline;
+  padding: 0px 30px 0 30px;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+.navbar ul li > *:hover {
+  color: #f9bb44;
+  cursor: default;
+}
+.items p {
+  width: 60%;
+  margin: auto;
+}
+.explore {
+  border: 1px solid white;
+  width: 120px !important;
+  background-color: rgba(235, 252, 249, 0.35);
+  height: 35px;
+  padding: 5px;
+  border-radius: 7px;
+}
+.explore:hover {
+  transform: scale(1.1) !important;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.explore:active {
+  transform: scale(0.9) !important;
+  transition: 0.5s;
+}
+@keyframes slideInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.text-from-bottom {
+  color: white;
+  animation: slideInFromBottom 1s ease-out;
+}
+.Homebox,
+.FAQbox,
+.Puppycarebox {
+  background-color: rgb(244, 232, 209);
+}
+/* .care2img {
+  filter: brightness(0.7);
+  filter: contrast(1.5);
+} */

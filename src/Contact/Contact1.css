@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.Contact1box {
+  display: flex;
+  margin-bottom: 50px;
+  width: 100%;
+}
+.Formbox {
+  margin: 50px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 250, 240, 0.8);
+  border-bottom: 1px solid rgb(241, 197, 110);
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px #333333;
+}
+.Formbox form {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: fit-content;
+  margin-top: 50px;
+}
+.Formbox form input {
+  border: 1px solid rgb(241, 197, 110);
+  background-color: #ffff;
+  box-shadow: inset 1px 1px 2px #333333;
+  border-radius: 5px;
+  width: 60%;
+}
+.Formbox form textarea {
+  border: 1px solid rgb(241, 197, 110);
+  background-color: #ffff;
+  box-shadow: inset 1px 1px 2px #333333;
+  border-radius: 5px;
+  width: 100%;
+  height: 100px;
+}
+.Formbox form label {
+  text-align: left;
+  font-size: 16px;
+  margin-top: 10px;
+  font-weight: 500;
+  color: #e64747;
+}
+.Formbox form input:last-child {
+  margin: 5px auto 0;
+  color: #e64747;
+  width: 30%;
+
+  /* font-weight: bolder; */
+}
+.Formbox form input:last-child:hover {
+  background-color: #e64747;
+  color: white;
+  font-weight: bolder;
+}
+.Geobox {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px #333333;
+}
+.Geobox p {
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #e64747;
+  margin-bottom: 0;
+  text-align: start;
+  color: white;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
+}
+.Geobox span {
+  color: #e64747;
+}

@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+.title h1 {
+  color: #feab0d;
+  font-weight: 700;
+  text-shadow: -0.5px 1px 3px #ccc;
+  font-family: "Poppins", sans-serif;
+}
+.title p {
+  font-weight: 649;
+  color: #333333;
+  font-family: poppins;
+}
+.title {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}

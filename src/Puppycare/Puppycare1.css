@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+.Puppycare1 {
+  display: flex;
+  margin-top: 50px;
+}
+.Puppycareboxtext h4 {
+  color: #feab0d;
+  text-align: left;
+  margin-left: 15px;
+  padding-top: 15px;
+  font-size: 2.5em;
+  font-weight: 620;
+  text-shadow: -0.5px 1px 3px #969696;
+}
+.Puppycareboxtext > * {
+  font-size: 22px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  text-align: left;
+}
+.Puppycareboxtext {
+  margin-left: 50px;
+}
+.Puppycareboxtext button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  background-color: #feab0d;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 2px 2px 5px #333333;
+  border-left: 1.5px solid #ffffff;
+  border-top: 1.5px solid #ffffff;
+}
+.Puppycareboxtext button:hover {
+  background-color: #d28a04;
+}
+.Puppycareboxtext button:active {
+  box-shadow: inset 2px 2px 5px #333333;
+}
+.clean-ears,
+.eye-care {
+  border-radius: 25px;
+  width: 420px;
+  border-top: 2px solid #ffff;
+  border-left: 2px solid #ffff;
+  box-shadow: 2px 2px 5px #333333;
+}
+.care5 {
+  padding-bottom: 50px;
+}
+.Puppycareboximg > * {
+  filter: drop-shadow(2px 2px 2px #333333);
+}

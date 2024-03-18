@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+.faq-button1 {
+  background-color: #feab0d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.boxfaq4 {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+}
+.boxfaq4 h1 {
+  color: #feab0d;
+  font-weight: 700;
+  text-shadow: -0.5px 1px 3px #ccc;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+}
+.innerbox5 {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+}
+.innerbox6 {
+  width: 25%;
+  height: 100%;
+}
+.innerbox6 img {
+  width: 100%;
+  object-fit: cover;
+  box-shadow: 0 5px 15px #333333;
+  border-radius: 10px;
+  border: 1.5px solid #ffffff;
+  margin-bottom: 50px;
+}
+#example-collapse-text {
+  font-size: 22px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: lighter;
+}
+
+.container1 {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+}
+.container1 div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}

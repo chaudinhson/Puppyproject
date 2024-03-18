@@ -1,0 +1,132 @@
+.box {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #edb24e;
+  border-top: 2px solid #333333;
+}
+.box > * {
+  width: 80%;
+}
+.boxup {
+  border-bottom: 1px solid #333333;
+  height: 65%;
+  display: flex;
+}
+.boxdown {
+  height: 35%;
+  display: flex;
+}
+.boxupleft {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.boxupright {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  margin-left: 50px;
+}
+.boxupleft > * {
+  color: #333333;
+  margin: 0 5px;
+  padding: 15px;
+}
+.right1,
+.right2,
+.right3 {
+  height: 100%;
+}
+.right1 {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.right2 {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.right3 {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+.right1 ul li a {
+  text-decoration: none;
+  text-align: center;
+  color: #333333;
+}
+.right1 ul li {
+  list-style: none;
+}
+.right1 h4 {
+  color: #333333;
+  margin-top: 50px;
+  text-align: center;
+}
+.right1 ul {
+  padding: 0;
+}
+.right1 ul li a:hover {
+  color: blue;
+}
+.right2 h4 {
+  color: #333333;
+  margin-top: 50px;
+  text-align: left;
+}
+.right2 p {
+  color: #333333;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+.socicalbox {
+  display: flex;
+  justify-content: center;
+}
+.right3 h4 {
+  color: #333333;
+  margin-top: 50px;
+}
+.socicalbox > * {
+  margin: 0 10px;
+}
+.socicalbox > *:hover {
+  cursor: pointer;
+}
+.boxdown > * {
+  height: 100%;
+}
+.boxdownleft,
+.boxdownright {
+  width: 50%;
+}
+.boxdownright > * {
+  width: 50%;
+  height: 100%;
+}
+.boxdownleft :first-child {
+  color: #333333;
+  text-align: left;
+  margin: 0 0 0 10px;
+}
+.boxdownright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boxdownleft :last-child {
+  color: #333333;
+  text-align: left;
+  margin: 5px 0 0 10px;
+}
+span {
+  color: #333333;
+}

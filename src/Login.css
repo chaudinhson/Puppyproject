@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out !important;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease-in-out !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+#loginmodal > * {
+  background-color: rgb(250, 252, 241);
+  border-top: 3px solid #ffbe98 !important ;
+  border-left: 3px solid #ffbe98 !important;
+  border-right: none !important;
+  border-bottom: none !important;
+}
+.fbggbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.fbggbox > * {
+  filter: drop-shadow(2px 2px 2px #ffff);
+  cursor: pointer;
+}
+.signinbox,
+.signupbox {
+  display: flex;
+  flex-direction: column;
+}
+/* #username,
+#signupusername {
+  margin-bottom: 20px;
+} */
+.signinbox input,
+.signupbox input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #d3d3d3;
+  border-radius: 5px;
+  outline: none;
+  width: 95%;
+  position: relative;
+}
+.passwordbox,
+.userbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.passwordbox span,
+.userbox span {
+  position: relative;
+  right: 30px;
+  bottom: 10px;
+  opacity: 0.5;
+  transform: scale(0.9);
+  cursor: pointer;
+}
+.remeberbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.rememberbox span {
+  margin-left: 5px;
+}
+.submitbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 95%;
+}
+.submitbox button {
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  background-color: #feab0d;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 2px 2px 5px #333333;
+  border-left: 1.5px solid #ffffff;
+  border-top: 1.5px solid #ffffff;
+  width: 100%;
+}
+.signintitle,
+.signuptitle {
+  color: #feab0d;
+  text-shadow: -0.5px 1.18px 1px #fff;
+  margin-left: 100px;
+}
+.btn-close {
+  display: none;
+}
+.signintitle:hover,
+.signuptitle:hover {
+  cursor: pointer;
+}
+.signintitle:active,
+.signuptitle:active {
+  color: #7a44f9;
+}
+.rememberbox input {
+  transform: scale(1.5);
+  margin-right: 10px;
+}
+.donthaveaccount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.donthaveaccount span {
+  margin-right: 10px;
+}
+.signuplink {
+  color: #feab0d;
+}
+.signuplink:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.signuplink:active {
+  color: #7a44f9;
+}
+.hiden {
+  display: none;
+}
