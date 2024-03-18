@@ -1,6 +1,7 @@
 import { Table, Col, Spinner } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Dogbreedspage from "../HeaderBackground/Dogbreedspage";
 const BreedsDetails = () => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -15,7 +16,7 @@ const BreedsDetails = () => {
       }
       const jsonData = await response.json();
       setData(jsonData);
-      setLoading(false);
+      setLoading(true);
     } catch (error) {
       // Xử lý lỗi ở đây
 
@@ -25,7 +26,7 @@ const BreedsDetails = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  if (loading) {
+  if (!loading) {
     return <Spinner animation="border" role="status" />;
   }
   if (!data) {
@@ -34,6 +35,7 @@ const BreedsDetails = () => {
 
   return (
     <>
+      <Dogbreedspage />
       <Table>
         <thead>
           <tr>
