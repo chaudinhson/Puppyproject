@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Carousel } from "react-bootstrap";
 const Dogbreedspage = () => {
   return (
-    <div className="backgroundbox">
+    <div className="backgroundbox kenburns-top-right">
       <Carousel>
         <Carousel.Item>
           <Carousel.Caption className="items text-from-bottom">
@@ -14,16 +14,16 @@ const Dogbreedspage = () => {
               Good new, we have a big library hear!
             </p>
             <br />
-            <p className="explore">LET’S EXPLORE</p>
+            {/* <p className="explore">LET’S EXPLORE</p> */}
           </Carousel.Caption>
           <img
             className="dogbreeds1"
-            src="./img/headerimages/breeds1.jpg"
+            src="./img/headerimages/breedpage1.jpg"
             alt="First slide"
           />
         </Carousel.Item>
         <Carousel.Item>
-          <img src="./img/headerimages/breeds2.jpg" alt="Second slide" />
+          <img src="./img/headerimages/dark-theme3.jpg" alt="Second slide" />
           <Carousel.Caption className="items text-from-bottom">
             <h3>A LIBRARY OF DOGS BREEDS</h3>
             <p>
@@ -34,7 +34,7 @@ const Dogbreedspage = () => {
               together!
             </p>
             <br />
-            <p className="explore">LET’S EXPLORE</p>
+            {/* <p className="explore">LET’S EXPLORE</p> */}
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

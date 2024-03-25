@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import "./Puppycare1.css";
+import { useNavigate } from "react-router-dom";
 const Puppycare2 = () => {
+  const navigate = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
       const element = document.querySelector(".text-from-bottom3");
@@ -41,7 +43,14 @@ const Puppycare2 = () => {
         </p>
 
         <div>
-          <button>Learn More</button>
+          <button
+            onClick={() => {
+              navigate("/GroomingCare");
+              window.scrollTo(0, 0);
+            }}
+          >
+            Learn More
+          </button>
         </div>
       </div>
       <div className="Puppycareboximg">

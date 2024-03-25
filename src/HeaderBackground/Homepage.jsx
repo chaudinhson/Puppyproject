@@ -3,7 +3,7 @@ import { Carousel } from "react-bootstrap";
 
 const Homepage = () => {
   return (
-    <div className="backgroundbox">
+    <div className="backgroundbox kenburns-top-right ">
       <Carousel>
         <Carousel.Item>
           <Carousel.Caption className="items text-from-bottom">
@@ -15,7 +15,7 @@ const Homepage = () => {
               lifesaver, and companion.
             </p>
             <br />
-            <p className="explore">LET’S EXPLORE</p>
+            {/* <p className="explore">LET’S EXPLORE</p> */}
           </Carousel.Caption>
           <img src="./img/headerimages/homepage1.jpg" alt="First slide" />
         </Carousel.Item>
@@ -28,7 +28,7 @@ const Homepage = () => {
               become important to all members of the family.
             </p>
             <br />
-            <p className="explore">LET’S EXPLORE</p>
+            {/* <p className="explore">LET’S EXPLORE</p> */}
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

@@ -1,6 +1,7 @@
 import "./Footer.css";
-
+import { useNavigate } from "react-router-dom";
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <div className="box">
       <div className="boxup">
@@ -11,31 +12,75 @@ const Footer = () => {
               alt=""
               width="60px"
               height="60px"
+              onClick={() => {
+                navigate("/");
+                window.scrollTo(0, 0);
+              }}
             />
           </div>
-          <div className="logotitle">PATRONA PUPPY</div>
+          <div>
+            <span
+              className="logotitle"
+              onClick={() => {
+                navigate("/");
+                window.scrollTo(0, 0);
+              }}
+            >
+              PATRONA PUPPY
+            </span>
+          </div>
         </div>
         <div className="boxupright">
           <div className="right1">
             <h4>Menu</h4>
             <ul>
-              <li>
-                <a href="/">HOME</a>
+              <li
+                onClick={() => {
+                  navigate("/");
+                  window.scrollTo(0, 0);
+                }}
+              >
+                HOME
               </li>
-              <li>
-                <a href="/Dogbreeds">DOG BREEDS</a>
+              <li
+                onClick={() => {
+                  navigate("/Dogbreeds");
+                  window.scrollTo(0, 0);
+                }}
+              >
+                DOG BREEDS
               </li>
-              <li>
-                <a href="/Puppycare">PUPPY CARE</a>
+              <li
+                onClick={() => {
+                  navigate("/Puppycare");
+                  window.scrollTo(0, 0);
+                }}
+              >
+                PUPPY CARE
               </li>
-              <li>
-                <a href="/FAQ">FAQ</a>
+              <li
+                onClick={() => {
+                  navigate("/FAQ");
+                  window.scrollTo(0, 0);
+                }}
+              >
+                FAQ
               </li>
-              <li>
-                <a href="/Contact">CONTACT</a>
+              <li
+                onClick={() => {
+                  navigate("/Contact");
+                  window.scrollTo(0, 0);
+                }}
+              >
+                CONTACT
               </li>
-              <li>
-                <a href="/Login">LOGIN</a>
+              <li
+                onClick={() => {
+                  navigate("/");
+                  window.scrollTo(0, 0);
+                }}
+              >
+                LOGIN
               </li>
             </ul>
           </div>

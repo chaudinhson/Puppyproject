@@ -29,17 +29,19 @@ const BreedsDetails = () => {
   if (!loading) {
     return <Spinner animation="border" role="status" />;
   }
+
   if (!data) {
     return <div>No data found</div>;
   }
 
   return (
-    <>
+    <div className="breed-detail-box">
       <Dogbreedspage />
-      <Table>
+      <Table className="detail-table container">
         <thead>
           <tr>
-            <Col colSpan="2">{data.Name}</Col>
+            <td>Name</td>
+            <td>{data.Name}</td>
           </tr>
         </thead>
         <tbody>
@@ -99,7 +101,7 @@ const BreedsDetails = () => {
           </tr>
         </tbody>
       </Table>
-    </>
+    </div>
   );
 };
 export default BreedsDetails;

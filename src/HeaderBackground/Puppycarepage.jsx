@@ -2,7 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Carousel } from "react-bootstrap";
 const Puppycarepage = () => {
   return (
-    <div className="backgroundbox">
+    <div className="backgroundbox kenburns-top-right">
       <Carousel>
         <Carousel.Item>
           <Carousel.Caption className="items text-from-bottom">
@@ -14,7 +14,7 @@ const Puppycarepage = () => {
               opportunity to check your puppy’s general health.
             </p>
             <br />
-            <p className="explore">LET’S EXPLORE</p>
+            {/* <p className="explore">LET’S EXPLORE</p> */}
           </Carousel.Caption>
           <img
             src="./img/headerimages/care2.jpg"
@@ -34,7 +34,7 @@ const Puppycarepage = () => {
               and lasting companionship.
             </p>
             <br />
-            <p className="explore">LET’S EXPLORE</p>
+            {/* <p className="explore">LET’S EXPLORE</p> */}
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

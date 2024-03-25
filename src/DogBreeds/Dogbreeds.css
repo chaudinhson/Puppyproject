@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
+}
+.breedtitle > * {
+  color: #f9bb44;
+}
+.breedtitle {
+  background-color: #222222;
+}
+.breedtitle h1 {
+  text-shadow: -0.5px 1.18px 1px #fff;
+  font-weight: 650;
+}
+.breedsection {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.filterresult {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 100px;
+}
+.filterbox {
+  /* background-color: #222222; */
+  display: flex;
+}
+.filterbox ul {
+  list-style-type: none;
+  padding: 0 10px;
+}
+.filterbox ul li {
+  display: flex;
+}
+.filterbox ul li span {
+  width: 80%;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  box-shadow: 3px 2px 2px #f9bb44;
+  text-align: left;
+  padding-left: 15px;
+  background-color: #f9bb44;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+.filterbox > * {
+  color: #f9bb44;
+}
+.filterbox h4,
+.filterbox h2 {
+  padding-left: 5px;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  border-radius: 5px;
+  box-shadow: inset 1px 1px 2px #fff;
+  text-shadow: 1px 1px 1px #fff;
+}
+/* .searchbox input {
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #f9bb44;
+  padding-left: 10px;
+  margin-bottom: 10px;
+
+  position: absolute;
+  color: #222222;
+  font-weight: lighter;
+} */
+
+.searchinput {
+  width: 100%;
+  display: flex;
+  height: 40px;
+  /* background-color: #222222; */
+}
+.searchresultbox {
+  display: flex;
+}
+.searchinput span {
+  position: relative;
+  top: 7px;
+  right: 30px;
+  opacity: 0.5;
+}
+.paginationbox {
+  display: flex;
+  /* width: 600px; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 81%;
+  position: relative;
+  bottom: 320px;
+  margin: 0;
+  left: 35px; */
+}
+
+.cardbox > * {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+.cardbox button {
+  padding: 5px 10px;
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  background-color: #feab0d;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 2px 2px 5px #333333;
+  border-left: 1.5px solid #ffffff;
+  border-top: 1.5px solid #ffffff;
+}
+.cardbox button:hover {
+  background-color: #d18a06;
+}
+.cardbox button:active {
+  box-shadow: inset 2px 2px 5px #333333;
+}
+.cardbox {
+  margin: 10px 0;
+  border: none;
+  padding: 10px 25px;
+}
+.cardbox > img {
+  border-radius: 10px;
+  border-left: 2px solid #4b82f8;
+  border-top: 2px solid #4b82f8;
+  box-shadow: 1.5px 1px 5px rgb(0 0 0 / 50%);
+  margin-bottom: 5px;
+}
+.cardtitle {
+  font-weight: lighter;
+  text-align: left;
+  margin-top: 5px;
+}
+
+.cardbodybox {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: start;
+}
+.hidenbox {
+  display: none;
+}
+.innerbreedsectionbox {
+  display: flex;
+}
+.cardimg:hover {
+  transform: scale3d(1.05, 1.05, 1.1);
+  transition: 0.5s;
+}
+.cardimg {
+  transition: 0.5s;
+}
+.pagiitem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
+  transform: none;
+}
+.detail-table td {
+  border: none;
+  text-align: left;
+  padding: 15px;
+  font-size: 18px;
+  background-color: rgb(244, 232, 209);
+}
+.detail-table td:nth-child(odd) {
+  /* background-color: #f9bb44; */
+  font-family: cursive, sans-serif;
+  font-size: 24px;
+  color: #ac7104;
+  padding-right: 30px;
+}
+.breed-detail-box {
+  background-color: rgb(244, 232, 209);
+  height: 100%;
+}
+.detail-table td:nth-child(even) {
+  /* background-color: #f9bb44; */
+  /* font-family: cursive, sans-serif; */
+  font-size: 20px;
+  color: #83601e;
+  padding-right: 30px;
+  font-weight: lighter;
+  line-height: 45px;
+  /* text-align: end; */
+}

@@ -57,11 +57,7 @@
   display: flex;
   flex-direction: column;
 }
-.right1 ul li a {
-  text-decoration: none;
-  text-align: center;
-  color: #333333;
-}
+
 .right1 ul li {
   list-style: none;
 }
@@ -73,9 +69,16 @@
 .right1 ul {
   padding: 0;
 }
-.right1 ul li a:hover {
+.right1 > ul li:hover {
   color: blue;
+  cursor: pointer;
 }
+.right1 > ul li:hover::after {
+  content: " >";
+  color: blue;
+  /* margin-right: 10px; */
+}
+
 .right2 h4 {
   color: #333333;
   margin-top: 50px;
@@ -127,6 +130,9 @@
   text-align: left;
   margin: 5px 0 0 10px;
 }
-span {
-  color: #333333;
+
+.logotitle:hover,
+.logo:hover {
+  cursor: pointer;
+  color: blue;
 }

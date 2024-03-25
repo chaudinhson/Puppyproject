@@ -1,51 +1,67 @@
+import Breedfilter from "./Breedfilter";
+import Searchcomponent from "./Searchcomponent";
 import ShowBreedinfo from "./ShowBreedinfo";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Breedsection = () => {
+  const navigate = useNavigate();
+  const [searchClicked, setSearchClicked] = useState(false);
+  const [searchClicked1, setSearchClicked1] = useState(false);
+  const [click2, setclick2] = useState(false);
+  const [click4, setclick4] = useState(false);
+  const click1 = () => {
+    setclick4(!click4);
+    setclick2(false);
+  };
+  const click3 = () => {
+    setclick2(!click2);
+    setclick4(false);
+  };
+  const handleSearchClick = () => {
+    setSearchClicked(true); // Đánh dấu rằng nút search đã được nhấn
+  };
+  const handleSearchClick1 = () => {
+    setSearchClicked1(true); // Đánh dấu rằng nút search đã được nhấn
+  };
   return (
     <>
       <div className="breedtitle row">
-        <h1 className="col-xl-12">ALL DOGS BREEDS</h1>
-        <p>PATRONA PUPPY</p>
+        <h1
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            window.location.reload();
+          }}
+          className="col-xl-12"
+        >
+          ALL DOGS BREEDS
+        </h1>
+
+        <p
+          onClick={() => {
+            navigate("/");
+            window.scrollTo(0, 0);
+          }}
+          style={{ cursor: "pointer" }}
+        >
+          PATRONA PUPPY
+        </p>
       </div>
-      <div className="breedsection row">
-        <div className="filterbox col-xl-2">
-          <div className="searchbox">
-            <input type="text" placeholder="Search" />
-          </div>
-          <div className="filterbox">
-            <h2>Filter</h2>
-            <h4>Character</h4>
-            <ul>
-              <li>
-                <span>Hypoallergenic</span>
-              </li>
-              <li>
-                <span>Fluffy</span>
-              </li>
-              <li>
-                <span>Smartest</span>
-              </li>
-              <li>
-                <span>Best Guard</span>
-              </li>
-            </ul>
-            <h4>Geography</h4>
-            <ul>
-              <li>
-                <span>Asia</span>
-              </li>
-              <li>
-                <span>America</span>
-              </li>
-              <li>
-                <span>Europe</span>
-              </li>
-            </ul>
-          </div>
+      <div className="breedsection  ">
+        <Searchcomponent
+          handleSearchClick={handleSearchClick}
+          click3={click3}
+          click4={click4}
+        />
+        <div className="filterbox  ">
+          <Breedfilter
+            handleSearchClick1={handleSearchClick1}
+            click1={click1}
+            click2={click2}
+          />
         </div>
-        <div className="sectionbox col-xl-10">
-          <ShowBreedinfo />
-        </div>
+
+        {searchClicked || searchClicked1 ? null : <ShowBreedinfo />}
       </div>
     </>
   );

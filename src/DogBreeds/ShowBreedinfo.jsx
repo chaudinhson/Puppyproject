@@ -3,10 +3,9 @@ import { Pagination } from "react-bootstrap";
 import Getdata from "./Getdata";
 import Breedinfo from "./Breedinfo";
 
-const ITEMS_PER_PAGE = 9; // number of cards per page
-const TOTAL_PAGES = 4; // number of pages
-
 const ShowBreedinfo = () => {
+  const ITEMS_PER_PAGE = 9; // number of cards per page
+  const TOTAL_PAGES = 4; // number of pages
   const [currentPage, setCurrentPage] = useState(1);
   const data = Getdata();
   if (!data) {
@@ -23,8 +22,8 @@ const ShowBreedinfo = () => {
   };
 
   return (
-    <div className="container">
-      <div className="row">
+    <div className=" paginationbox container">
+      <div className="row col-xl-11">
         {currentItems.map((item, index) => (
           <Breedinfo key={index} Pic={item.Pic} Name={item.Name} id={item.id} />
         ))}

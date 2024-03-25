@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
 import "./Puppycare1.css";
+import { useNavigate } from "react-router-dom";
 const Puppycare5 = () => {
+  const navigate = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
-      const element = document.querySelector(".text-from-bottom6");
+      const element = document.querySelector(".text-from-bottom7");
 
       if (element) {
         const rect = element.getBoundingClientRect();
@@ -25,7 +27,7 @@ const Puppycare5 = () => {
     };
   }, []);
   return (
-    <div className="Puppycare1 care5 container text-from-bottom6">
+    <div className="Puppycare1 care5 container text-from-bottom7">
       <div className="Puppycareboximg">
         <img
           className="clean-ears"
@@ -46,7 +48,14 @@ const Puppycare5 = () => {
         </p>
 
         <div>
-          <button>Learn More</button>
+          <button
+            onClick={() => {
+              navigate("/PawCare");
+              window.scrollTo(0, 0);
+            }}
+          >
+            Learn More
+          </button>
         </div>
       </div>
     </div>

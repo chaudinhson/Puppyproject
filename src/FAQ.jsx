@@ -8,11 +8,13 @@ const FAQ = () => {
   return (
     <div className="FAQbox">
       <FAQpage />
-      <FAQ1 />
-      <FAQ2 />
-      <FAQ3 />
-      <FAQ4 />
-      <FAQ5 />
+      <div className="faqrandomname">
+        <FAQ1 />
+        <FAQ2 />
+        <FAQ3 />
+        <FAQ4 />
+        <FAQ5 />
+      </div>
     </div>
   );
 };
