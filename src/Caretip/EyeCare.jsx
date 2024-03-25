@@ -81,7 +81,7 @@ const EyeCare = () => {
                 <div class="grid-item">
                   <img
                     id="grid-item-img6"
-                    src="./img/care/Bathing/eyecare-breath2.jpg"
+                    src="./img/care/Bathing/eyecare-breath3.jpg"
                     alt="Image 6"
                   />
                 </div>
