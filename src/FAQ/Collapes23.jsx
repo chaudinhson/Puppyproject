@@ -13,7 +13,7 @@ const Collapse23 = () => {
           aria-expanded={open23}
           className="faq-button1"
         >
-          How soon does my new puppy need to see a vet?
+          HOW SOON DOES MY NEW PUPPY NEED TO SEE A VET?
         </Button>
       </div>
 

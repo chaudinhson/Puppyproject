@@ -13,7 +13,7 @@ const Collapse11 = () => {
           aria-expanded={open11}
           className="faq-button1"
         >
-          Help- My Puppy Has Diarrheal ?
+          HELP! MY PUPPY HAS DIARRHEAL ?
         </Button>
       </div>
 

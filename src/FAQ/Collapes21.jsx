@@ -13,7 +13,7 @@ const Collapse21 = () => {
           aria-expanded={open21}
           className="faq-button1"
         >
-          How do I teach my pup not to jump on people?
+          HOW DO I TECH MY PUPPY NOT TO JUMP ON PEOPLE?
         </Button>
       </div>
 

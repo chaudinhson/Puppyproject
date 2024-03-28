@@ -13,7 +13,7 @@ const Collapse14 = () => {
           aria-expanded={open14}
           className="faq-button1"
         >
-          Why Is My Pup Always Licking/Scratching Himself?
+          WHY IS MY PUPPY ALWAYS LICKING/SCRATCHING HIMSELF?
         </Button>
       </div>
 

@@ -13,7 +13,7 @@ const Collapse22 = () => {
           aria-expanded={open22}
           className="faq-button1"
         >
-          How are the nutritional needs for different puppies' weight?
+          HOW ARE THE NUTRITIONAL NEEDS FOR DIFFERENT PUPPIES' WEIGHT?
         </Button>
       </div>
 

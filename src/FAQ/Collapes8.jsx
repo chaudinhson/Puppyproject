@@ -13,7 +13,7 @@ const Collapse8 = () => {
           aria-expanded={open8}
           className="faq-button1"
         >
-          How Do I Choose The Best Puppy Food ?
+          HOW DO I CHOOSE THE BEST PUPPY FOOD ?
         </Button>
       </div>
 

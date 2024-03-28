@@ -13,7 +13,7 @@ const Collapse24 = () => {
           aria-expanded={open24}
           className="faq-button1"
         >
-          Do I need to puppy proof my house? If so, how do I do it?
+          DO I NEED TO PUPPY PROOF MY HOUSE? IF SO, HOW DO I DO IT?
         </Button>
       </div>
 

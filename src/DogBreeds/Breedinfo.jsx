@@ -4,12 +4,30 @@ const Breedinfo = (props) => {
   const navigate = useNavigate();
   return (
     <Card className="col-xl-4 cardbox">
-      <Card.Img className="cardimg" src={props.Pic} />
+      <Card.Img
+        className="cardimg"
+        src={props.Pic}
+        style={{ cursor: "pointer" }}
+        onClick={() => {
+          navigate(`/Dogbreeds/${props.id}`);
+          window.scrollTo(0, 734);
+        }}
+      />
       <Card.Body className="cardbodybox">
-        <Card.Title className="cardtitle">{props.Name}</Card.Title>
+        <Card.Title
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            navigate(`/Dogbreeds/${props.id}`);
+            window.scrollTo(0, 734);
+          }}
+          className="cardtitle"
+        >
+          {props.Name}
+        </Card.Title>
         <button
           onClick={() => {
             navigate(`/Dogbreeds/${props.id}`);
+            window.scrollTo(0, 734);
           }}
         >
           Read More

@@ -3,17 +3,19 @@ import React, { useEffect } from "react";
 const Section4 = () => {
   useEffect(() => {
     const handleScroll = () => {
-      const element = document.querySelector(".text-from-bottom4");
+      const elements = document.querySelectorAll(".text-focus-in");
 
-      if (element) {
+      elements.forEach((element) => {
         const rect = element.getBoundingClientRect();
         const windowHeight =
           window.innerHeight || document.documentElement.clientHeight;
 
         if (rect.top < windowHeight) {
           element.classList.add("active");
+        } else {
+          element.classList.remove("active");
         }
-      }
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -25,11 +27,11 @@ const Section4 = () => {
     };
   }, []);
   return (
-    <div className="section4 text-from-bottom4 ">
+    <div className="section4  text-focus-in ">
       <div className="boximg4 ">
-        <img src="./img/section/section4.jpg" alt="" />
+        <img src="./img/section/section2-2.jpg" alt="" />
       </div>
-      <div className="boxtext4 ">
+      <div className="boxtext4  ">
         <p>
           Our military unit stationed in various locations, spanning from Europe
           to North America and back to Asia, providing numerous opportunities to

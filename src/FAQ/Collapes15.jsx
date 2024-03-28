@@ -13,7 +13,7 @@ const Collapse15 = () => {
           aria-expanded={open15}
           className="faq-button1"
         >
-          How Can I Help My Constipated Puppy?
+          HOW CAN I HELP MY CONSTIPATED PUPPY?
         </Button>
       </div>
 

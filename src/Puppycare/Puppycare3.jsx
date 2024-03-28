@@ -50,7 +50,7 @@ const Puppycare3 = () => {
           <button
             onClick={() => {
               navigate("/EarsCare");
-              window.scrollTo(0, 0);
+              window.scrollTo(0, 734);
             }}
           >
             Learn More

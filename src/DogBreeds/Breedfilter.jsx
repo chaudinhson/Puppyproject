@@ -48,114 +48,152 @@ const Breedfilter = ({ handleSearchClick1, click1, click2 }) => {
       visiblePageNumbers.push(i);
     }
   }
-  return (
-    <>
-      <div className="formbox ">
-        <form onSubmit={handleSubmit}>
-          <h4>Character</h4>
-          <label htmlFor="Hypoallergenic">
-            Hypoallergenic
-            <input
-              type="radio"
-              name="Character"
-              id="Hypoallergenic"
-              value="Hypoallergenic"
-              checked={selectedCharacter === "Hypoallergenic"}
-              onChange={(e) => setSelectedCharacter(e.target.value)}
-            />
-          </label>
-          <br />
-          <label htmlFor="Fluffy">
-            Fluffy
-            <input
-              type="radio"
-              name="Character"
-              id="Fluffy"
-              value="Fluffy"
-              checked={selectedCharacter === "Fluffy"}
-              onChange={(e) => setSelectedCharacter(e.target.value)}
-            />
-          </label>
-          <br />
-          <label htmlFor="Smartest">
-            Smartest
-            <input
-              type="radio"
-              name="Character"
-              id="Smartest"
-              value="Smartest"
-              checked={selectedCharacter === "Smartest"}
-              onChange={(e) => setSelectedCharacter(e.target.value)}
-            />
-          </label>
-          <br />
-          <label htmlFor="BestGuard">
-            Best Guard
-            <input
-              type="radio"
-              name="Character"
-              id="BestGuard"
-              value="Best Guard"
-              checked={selectedCharacter === "Best Guard"}
-              onChange={(e) => setSelectedCharacter(e.target.value)}
-            />
-          </label>
-          <br />
 
-          <h4>Geography</h4>
-          <label htmlFor="Asia">
-            Asia
-            <input
-              type="radio"
-              name="Geography"
-              id="Asia"
-              value="Asia"
-              checked={selectedGeography === "Asia"}
-              onChange={(e) => setSelectedGeography(e.target.value)}
-            />
-          </label>
-          <br />
-          <label htmlFor="America">
-            America
-            <input
-              type="radio"
-              name="Geography"
-              id="America"
-              value="America"
-              checked={selectedGeography === "America"}
-              onChange={(e) => setSelectedGeography(e.target.value)}
-            />
-          </label>
-          <br />
-          <label htmlFor="Europe">
-            Europe
-            <input
-              type="radio"
-              name="Geography"
-              id="Europe"
-              value="Europe"
-              checked={selectedGeography === "Europe"}
-              onChange={(e) => setSelectedGeography(e.target.value)}
-            />
-          </label>
-          <br />
-          <input type="submit" value="Submit" />
-          <input
-            onClick={() => {
-              window.location.reload();
-            }}
-            type="reset"
-            value="reset"
-          />
-        </form>
+  const handleReset = () => {
+    setSelectedCharacter("");
+    setSelectedGeography("");
+  };
+
+  return (
+    <div>
+      <div>
+        <div class="offcanvas offcanvas-start" id="demo">
+          <div class="offcanvas-body">
+            <div className="formbox ">
+              <form onSubmit={handleSubmit} onReset={handleReset}>
+                <h4>Character</h4>
+                <label
+                  htmlFor="Hypoallergenic"
+                  className={
+                    selectedCharacter === "Hypoallergenic" ? "selected" : ""
+                  }
+                >
+                  Hypoallergenic
+                </label>
+                <input
+                  type="radio"
+                  name="Character"
+                  id="Hypoallergenic"
+                  value="Hypoallergenic"
+                  checked={selectedCharacter === "Hypoallergenic"}
+                  onChange={(e) => setSelectedCharacter(e.target.value)}
+                />
+                <br />
+                <label
+                  htmlFor="Fluffy"
+                  className={selectedCharacter === "Fluffy" ? "selected" : ""}
+                >
+                  Fluffy
+                </label>
+                <input
+                  type="radio"
+                  name="Character"
+                  id="Fluffy"
+                  value="Fluffy"
+                  checked={selectedCharacter === "Fluffy"}
+                  onChange={(e) => setSelectedCharacter(e.target.value)}
+                />
+                <br />
+                <label
+                  htmlFor="Smartest"
+                  className={selectedCharacter === "Smartest" ? "selected" : ""}
+                >
+                  Smartest
+                </label>
+                <input
+                  type="radio"
+                  name="Character"
+                  id="Smartest"
+                  value="Smartest"
+                  checked={selectedCharacter === "Smartest"}
+                  onChange={(e) => setSelectedCharacter(e.target.value)}
+                />
+                <br />
+                <label
+                  htmlFor="BestGuard"
+                  className={
+                    selectedCharacter === "Best Guard" ? "selected" : ""
+                  }
+                >
+                  Best Guard
+                </label>
+                <input
+                  type="radio"
+                  name="Character"
+                  id="BestGuard"
+                  value="Best Guard"
+                  checked={selectedCharacter === "Best Guard"}
+                  onChange={(e) => setSelectedCharacter(e.target.value)}
+                />
+                <br />
+
+                <h4>Geography</h4>
+                <label
+                  htmlFor="Asia"
+                  className={selectedGeography === "Asia" ? "selected" : ""}
+                >
+                  Asia
+                </label>
+                <input
+                  type="radio"
+                  name="Geography"
+                  id="Asia"
+                  value="Asia"
+                  checked={selectedGeography === "Asia"}
+                  onChange={(e) => setSelectedGeography(e.target.value)}
+                />
+                <br />
+                <label
+                  htmlFor="America"
+                  className={selectedGeography === "America" ? "selected" : ""}
+                >
+                  America
+                </label>
+                <input
+                  type="radio"
+                  name="Geography"
+                  id="America"
+                  value="America"
+                  checked={selectedGeography === "America"}
+                  onChange={(e) => setSelectedGeography(e.target.value)}
+                />
+                <br />
+                <label
+                  htmlFor="Europe"
+                  className={selectedGeography === "Europe" ? "selected" : ""}
+                >
+                  Europe
+                </label>
+                <input
+                  type="radio"
+                  name="Geography"
+                  id="Europe"
+                  value="Europe"
+                  checked={selectedGeography === "Europe"}
+                  onChange={(e) => setSelectedGeography(e.target.value)}
+                />
+                <br />
+                <input type="submit" value="Apply" />
+                <input type="reset" value="Reload" />
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid mt-3 boxbtnOffcanvas">
+          <button
+            class="btn"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#demo"
+          >
+            {" "}
+            {/* <span class="material-symbols-outlined lens-blur">lens_blur</span> */}
+            Filter
+            <span class="material-symbols-outlined lens-blur">lens_blur</span>
+          </button>
+        </div>
       </div>
-      {/* <div
-        className={
-          click2
-            ? "filterresult container row hidenbox"
-            : "filterresult container row"
-        }
-      > */}
       <div
         className={
           showfilter
@@ -187,7 +225,7 @@ const Breedfilter = ({ handleSearchClick1, click1, click2 }) => {
           ))}
         </Pagination>
       </div>
-    </>
+    </div>
   );
 };
 

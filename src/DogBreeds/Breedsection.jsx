@@ -19,10 +19,10 @@ const Breedsection = () => {
     setclick4(false);
   };
   const handleSearchClick = () => {
-    setSearchClicked(true); // Đánh dấu rằng nút search đã được nhấn
+    setSearchClicked(true);
   };
   const handleSearchClick1 = () => {
-    setSearchClicked1(true); // Đánh dấu rằng nút search đã được nhấn
+    setSearchClicked1(true);
   };
   return (
     <>
@@ -53,13 +53,16 @@ const Breedsection = () => {
           click3={click3}
           click4={click4}
         />
-        <div className="filterbox  ">
-          <Breedfilter
-            handleSearchClick1={handleSearchClick1}
-            click1={click1}
-            click2={click2}
-          />
-        </div>
+
+        {searchClicked ? null : (
+          <div className="filterbox  ">
+            <Breedfilter
+              handleSearchClick1={handleSearchClick1}
+              click1={click1}
+              click2={click2}
+            />
+          </div>
+        )}
 
         {searchClicked || searchClicked1 ? null : <ShowBreedinfo />}
       </div>

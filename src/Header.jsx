@@ -14,9 +14,14 @@ import GroomingCare from "./Caretip/GroomingCare";
 import EarsCare from "./Caretip/EarsCare";
 import EyeCare from "./Caretip/EyeCare";
 import PawCare from "./Caretip/PawCare";
+import Dropdown from "react-bootstrap/Dropdown";
+import Notfound from "./Notfound";
 const Header = () => {
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
+  const [LoggedInUser, setLoggedInUser] = useState(
+    JSON.parse(localStorage.getItem("loggedInUser")) || null
+  );
 
   const handleLoginClick = () => {
     setShowModal(true);
@@ -24,6 +29,11 @@ const Header = () => {
 
   const handleCloseModal = () => {
     setShowModal(false);
+  };
+  const handleLogout = () => {
+    setLoggedInUser(null); // Clear the logged-in user state
+    // navigate(-1);// Clear the logged-in user state
+    localStorage.removeItem("loggedInUser");
   };
 
   return (
@@ -72,13 +82,33 @@ const Header = () => {
                 <Link to="/Contact">CONTACT</Link>
               </li>
               <li>
-                <p onClick={handleLoginClick}>LOGIN</p>
+                {LoggedInUser ? (
+                  <Dropdown drop="end">
+                    <span>{LoggedInUser.username}</span>
+                    <Dropdown.Toggle id="dropdown-split-basic" />
+                    <Dropdown.Menu id="drop-menu">
+                      <Dropdown.Item
+                        className="drop-item-1"
+                        onClick={handleLogout}
+                        id="dropdown-button-dark-example1 "
+                      >
+                        Log Out
+                      </Dropdown.Item>
+                    </Dropdown.Menu>
+                  </Dropdown>
+                ) : (
+                  <p onClick={handleLoginClick}>LOGIN</p>
+                )}
               </li>
             </ul>
           </nav>
         </div>
       </div>
-      <Login show={showModal} handleClose={handleCloseModal} />
+      <Login
+        show={showModal}
+        handleClose={handleCloseModal}
+        setLoggedInUser={setLoggedInUser}
+      />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Dogbreeds" element={<Dogbreeds />} />
@@ -91,6 +121,7 @@ const Header = () => {
         <Route path="/EarsCare" element={<EarsCare />} />
         <Route path="/EyeCare" element={<EyeCare />} />
         <Route path="/PawCare" element={<PawCare />} />
+        <Route path="*" element={<Notfound />} />
       </Routes>
     </>
   );

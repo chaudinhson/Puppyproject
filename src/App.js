@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import Scrolltop from "./Scrolltop";
 function App() {
   return (
-    <div className="App">
+    <div className="App ">
       <Header />
       <Footer />
       <Scrolltop />

@@ -13,7 +13,7 @@ const Collapse17 = () => {
           aria-expanded={open17}
           className="faq-button1"
         >
-          When Should I Switch To An Adult Dog Food ?
+          WHEN SHOULD I SWITCH TO AN ADULT DOG FOOD ?
         </Button>
       </div>
 

@@ -3,7 +3,7 @@ import { Modal, Button } from "react-bootstrap";
 import "./Login.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-const Login = ({ show, handleClose }) => {
+const Login = ({ show, handleClose, setLoggedInUser }) => {
   const [showbox, setshowbox] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showPassword2, setShowPassword2] = useState(false);
@@ -14,11 +14,10 @@ const Login = ({ show, handleClose }) => {
   const [confirmpassword, setConfirmpassword] = useState("");
   const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/; // example@example.com
   const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; //Password123||Password must have at least one letter, at least one number, and at least eight characters.
-  const isValidEmail = emailPattern.test(username);
-  const isValidPassword = passwordPattern.test(password);
   const isValidSignupEmail = emailPattern.test(signupname);
   const isValidSignupPassword = passwordPattern.test(signuppassword);
   const navigate = useNavigate();
+  const [error, setError] = useState("");
   const userdata = {
     username: signupname,
     password: signuppassword,
@@ -59,19 +58,42 @@ const Login = ({ show, handleClose }) => {
       }
     }
   };
-  const HandleLogin = () => {
-    if (isValidEmail && isValidPassword) {
-      localStorage.setItem("username", username);
-      localStorage.setItem("password", password);
-      navigate("/");
-      handleClose();
-    } else {
-      if (!isValidSignupEmail) {
-        alert("Invalid Email");
+  const HandleLogin = async () => {
+    try {
+      // Fetch sign-up data from the API
+      const response = await fetch(
+        "https://65d55bd63f1ab8c63436c752.mockapi.io/userdata"
+      );
+      if (!response.ok) {
+        throw new Error("Failed to fetch sign-up data");
       }
-      if (!isValidSignupPassword) {
-        alert("Invalid Password");
+      const userData = await response.json();
+
+      // Check if the entered credentials match the sign-up data
+      const foundUser = userData.find(
+        (user) => user.username === username && user.password === password
+      );
+
+      if (foundUser) {
+        // Successful login
+        localStorage.setItem("loggedInUser", JSON.stringify(foundUser));
+        console.log("Login successful");
+        setLoggedInUser(foundUser);
+        navigate("/");
+        handleClose();
+        setUsername("");
+        setPassword("");
+        setError("");
+      } else {
+        // Unsuccessful login
+        setError("Wrong Email or Password!!!");
+        setTimeout(() => {
+          setError("");
+        }, 2000);
       }
+    } catch (error) {
+      console.error("Error:", error);
+      setError("Failed to log in. Please try again later.");
     }
   };
 
@@ -123,6 +145,7 @@ const Login = ({ show, handleClose }) => {
           <div className={showbox ? "signinbox" : "signinbox hiden"}>
             <div className="userbox">
               <input
+                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                 type="email"
                 name="username"
                 id="username"
@@ -134,12 +157,14 @@ const Login = ({ show, handleClose }) => {
             </div>
             <div className="passwordbox">
               <input
+                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
                 type={showPassword ? "text" : "password"}
                 name="signinpassword"
                 id="signinpassword"
                 placeholder="Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                onKeyDown={HandleLoginKeydown}
               />
               <span
                 onClick={togglePasswordVisibility}
@@ -150,14 +175,11 @@ const Login = ({ show, handleClose }) => {
             </div>
 
             <div className="submitbox">
-              <Button
-                variant="primary"
-                type="submit"
-                onKeyDown={HandleLoginKeydown}
-                onClick={HandleLogin}
-              >
+              <Button variant="primary" type="submit" onClick={HandleLogin}>
                 Login
               </Button>
+              {error && <p className="error-text">{error}</p>}
+
               <div className="fbggbox">
                 <svg
                   width="40"
@@ -234,6 +256,7 @@ const Login = ({ show, handleClose }) => {
           <div className={showbox ? "signupbox hiden" : "signupbox"}>
             <div className="userbox">
               <input
+                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                 type="email"
                 name="signupusername"
                 id="signupusername"
@@ -246,6 +269,7 @@ const Login = ({ show, handleClose }) => {
 
             <div className="passwordbox">
               <input
+                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
                 type={showPassword ? "text" : "password"}
                 name="signuppassword"
                 id="signuppassword"
@@ -262,6 +286,7 @@ const Login = ({ show, handleClose }) => {
             </div>
             <div className="passwordbox">
               <input
+                pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
                 type={showPassword2 ? "text" : "password"}
                 name="confirmpassword"
                 id="confirmpassword"
@@ -270,6 +295,7 @@ const Login = ({ show, handleClose }) => {
                 onChange={(e) => {
                   setConfirmpassword(e.target.value);
                 }}
+                onKeyDown={HandleSignupKeydown}
               />
               <span
                 onClick={togglePasswordVisibility2}
@@ -279,12 +305,7 @@ const Login = ({ show, handleClose }) => {
               </span>
             </div>
             <div className="submitbox">
-              <Button
-                variant="primary"
-                type="submit"
-                onKeyDown={HandleSignupKeydown}
-                onClick={HandleSignup}
-              >
+              <Button variant="primary" type="submit" onClick={HandleSignup}>
                 Sign Up
               </Button>
             </div>

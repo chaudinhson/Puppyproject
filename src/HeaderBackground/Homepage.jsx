@@ -4,8 +4,8 @@ import { Carousel } from "react-bootstrap";
 const Homepage = () => {
   return (
     <div className="backgroundbox kenburns-top-right ">
-      <Carousel>
-        <Carousel.Item>
+      <Carousel className="Crouselbox">
+        <Carousel.Item className="slideitems1">
           <Carousel.Caption className="items text-from-bottom">
             <h3>A FRIEND OF US</h3>
             <p>
@@ -19,7 +19,7 @@ const Homepage = () => {
           </Carousel.Caption>
           <img src="./img/headerimages/homepage1.jpg" alt="First slide" />
         </Carousel.Item>
-        <Carousel.Item>
+        <Carousel.Item className="slideitems1">
           <img src="./img/headerimages/slide1.jpg" alt="Second slide" />
           <Carousel.Caption className="items text-from-bottom">
             <h3>A FAMILY OF US</h3>

@@ -5,17 +5,18 @@ const Puppycare1 = () => {
   const navigate = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
-      const element = document.querySelector(".text-from-bottom2");
-
-      if (element) {
+      const element = document.querySelectorAll(".text-focus-in");
+      element.forEach((element) => {
         const rect = element.getBoundingClientRect();
         const windowHeight =
           window.innerHeight || document.documentElement.clientHeight;
 
         if (rect.top < windowHeight) {
           element.classList.add("active");
+        } else {
+          element.classList.remove("active");
         }
-      }
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -27,7 +28,7 @@ const Puppycare1 = () => {
     };
   }, []);
   return (
-    <div className="Puppycare1 container text-from-bottom2">
+    <div className="Puppycare1 container ">
       <div className="Puppycareboximg">
         <svg
           width="327"
@@ -186,7 +187,7 @@ const Puppycare1 = () => {
           />
         </svg>
       </div>
-      <div className="Puppycareboxtext">
+      <div className="Puppycareboxtext text-focus-in">
         <h4>Bathing</h4>
         <p>
           How often you should bathe or wash your puppy will vary between
@@ -205,7 +206,7 @@ const Puppycare1 = () => {
           <button
             onClick={() => {
               navigate("/BathingCare");
-              window.scrollTo(0, 0);
+              window.scrollTo(0, 734);
             }}
           >
             Learn More

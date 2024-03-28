@@ -40,7 +40,7 @@
 }
 #example-collapse-text {
   font-size: 22px;
-  text-align: center;
+  text-align: left !important;
   font-family: "Poppins", sans-serif;
   font-weight: lighter;
 }

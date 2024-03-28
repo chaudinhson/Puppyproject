@@ -3,17 +3,19 @@ import React, { useEffect } from "react";
 const Section3 = () => {
   useEffect(() => {
     const handleScroll = () => {
-      const element = document.querySelector(".text-from-bottom3");
+      const elements = document.querySelectorAll(".text-focus-in");
 
-      if (element) {
+      elements.forEach((element) => {
         const rect = element.getBoundingClientRect();
         const windowHeight =
           window.innerHeight || document.documentElement.clientHeight;
 
         if (rect.top < windowHeight) {
           element.classList.add("active");
+        } else {
+          element.classList.remove("active");
         }
-      }
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -25,8 +27,8 @@ const Section3 = () => {
     };
   }, []);
   return (
-    <div className="section3 container text-from-bottom3">
-      <div className="boxtext3 ">
+    <div className="section3 container text-focus-in ">
+      <div className="boxtext3  ">
         <p>
           I encountered Luna, an incredibly intelligent dog within our corps.
           She is a clever and courageous girl.
@@ -43,7 +45,7 @@ const Section3 = () => {
         </p>
       </div>
       <div className="boximg3 ">
-        <img src="./img/section/section3.jpg" alt="" />
+        <img src="./img/section/section2-1.jpg" alt="" />
       </div>
     </div>
   );

@@ -81,7 +81,7 @@ const EyeCare = () => {
                 <div class="grid-item">
                   <img
                     id="grid-item-img6"
-                    src="./img/care/Bathing/eyecare-breath3.jpg"
+                    src="./img/care/Bathing/eyecare-breath2.jpg"
                     alt="Image 6"
                   />
                 </div>
@@ -97,7 +97,7 @@ const EyeCare = () => {
                   alt=""
                   height="300"
                 />
-                <div>
+                <div style={{ marginLeft: "10px" }}>
                   <li>
                     <span class="material-symbols-outlined paw_icon">pets</span>
                     <span>
@@ -152,7 +152,7 @@ const EyeCare = () => {
                   alt=""
                   height="300px"
                 />
-                <div>
+                <div style={{ marginLeft: "10px" }}>
                   <li>
                     <span class="material-symbols-outlined paw_icon">pets</span>
                     <span>

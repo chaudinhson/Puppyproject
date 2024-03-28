@@ -45,7 +45,7 @@ const Puppycare4 = () => {
           <button
             onClick={() => {
               navigate("/EyeCare");
-              window.scrollTo(0, 0);
+              window.scrollTo(0, 734);
             }}
           >
             Learn More

@@ -46,7 +46,7 @@ const Puppycare2 = () => {
           <button
             onClick={() => {
               navigate("/GroomingCare");
-              window.scrollTo(0, 0);
+              window.scrollTo(0, 734);
             }}
           >
             Learn More

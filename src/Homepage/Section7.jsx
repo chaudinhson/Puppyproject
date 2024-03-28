@@ -3,17 +3,19 @@ import React, { useEffect } from "react";
 const Section7 = () => {
   useEffect(() => {
     const handleScroll = () => {
-      const element = document.querySelector(".text-from-bottom7");
+      const elements = document.querySelectorAll(".text-focus-in");
 
-      if (element) {
+      elements.forEach((element) => {
         const rect = element.getBoundingClientRect();
         const windowHeight =
           window.innerHeight || document.documentElement.clientHeight;
 
         if (rect.top < windowHeight) {
           element.classList.add("active");
+        } else {
+          element.classList.remove("active");
         }
-      }
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -25,9 +27,9 @@ const Section7 = () => {
     };
   }, []);
   return (
-    <div className="section7 container text-from-bottom7 ">
+    <div className="section7 container  text-focus-in ">
       <div className="boximg7 ">
-        <img src="./img/section/section7.jpg" alt="" />
+        <img src="./img/section/section4-1.jpg" alt="" />
       </div>
       <div className="boxtext7  ">
         <p>

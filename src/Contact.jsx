@@ -5,8 +5,10 @@ const Contact = () => {
   return (
     <>
       <Contactpage />
-      <div className="Contactbox container">
-        <Contact1 />
+      <div className="Contactbox">
+        <div className=" container">
+          <Contact1 />
+        </div>
       </div>
     </>
   );

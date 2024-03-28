@@ -13,7 +13,7 @@ const Collapse4 = () => {
           aria-expanded={open4}
           className="faq-button1"
         >
-          VACCINATION SCHEDULES FOR PUPPIES AND DOGS
+          VACCINATION SCHEDULES FOR PUPPIES AND DOGS?
         </Button>
       </div>
 

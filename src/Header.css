@@ -6,6 +6,8 @@
   border-bottom: 1px solid white;
   background-color: #333333;
   overflow-x: hidden;
+  /* height: 100px; */
+  align-items: start;
 }
 .Headerbox::before {
   content: "";
@@ -31,7 +33,6 @@
   width: 100%;
 }
 .backgroundbox {
-  z-index: 1;
   border-bottom: 1.5px solid #333333;
 }
 .items {
@@ -45,6 +46,7 @@
   width: 20%;
   display: flex;
   align-items: center;
+  padding-top: 8px;
 }
 .Headerlogo > * {
   margin: auto;
@@ -56,7 +58,6 @@
 }
 .navbar ul {
   display: flex;
-
   justify-content: space-between;
   align-items: center;
   list-style: none;
@@ -112,9 +113,11 @@
 }
 .Homebox,
 .FAQbox,
-.Puppycarebox {
+.Puppycarebox,
+.Contactbox {
   background-color: rgb(244, 232, 209);
 }
+
 .kenburns-top-right {
   -webkit-animation: kenburns-top-right 15s ease-out both infinite;
   animation: kenburns-top-right 15s ease-out both infinite;
@@ -180,4 +183,41 @@
 }
 .faqrandomname {
   margin-top: 50px;
+}
+#drop-menu {
+  z-index: 9999;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+.drop-item-1 {
+  color: #333333;
+  font-weight: 600;
+  height: fit-content;
+  padding: 0;
+  margin: 0;
+  width: fit-content;
+}
+#dropdown-split-basic {
+  background-color: #f9bb44;
+  color: black;
+  width: min-content;
+}
+.error-text {
+  color: red;
+  font-size: 18px;
+}
+.notfound-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #f7f7f7;
+}
+.notfound-box iframe {
+  width: 950px;
+  height: 600px;
+  pointer-events: none;
 }

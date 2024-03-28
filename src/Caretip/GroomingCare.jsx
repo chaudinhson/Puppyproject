@@ -97,7 +97,7 @@ const GroomingCare = () => {
                   alt=""
                   height="300"
                 />
-                <div>
+                <div style={{ marginLeft: "10px" }}>
                   <li>
                     <span class="material-symbols-outlined paw_icon">pets</span>
                     <span>
@@ -170,7 +170,7 @@ const GroomingCare = () => {
                   alt=""
                   height="200"
                 />
-                <div>
+                <div style={{ marginLeft: "10px" }}>
                   <li>
                     <span class="material-symbols-outlined paw_icon">pets</span>
                     <span>

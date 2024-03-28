@@ -13,7 +13,7 @@ const Collapse19 = () => {
           aria-expanded={open19}
           className="faq-button1"
         >
-          How Often Should I Groom And/Or Bathe My Pet ?
+          HOW OFTEN SHOULD I GROOM AND/OR BATHE MY PET ?
         </Button>
       </div>
 

@@ -15,7 +15,7 @@ const FAQ1 = () => {
         <Collapse2 />
         <Collapse3 />
         <Collapse4 />
-        <Collapse5 />
+        {/* <Collapse5 /> */}
         <Collapse6 />
         <Collapse7 />
       </div>

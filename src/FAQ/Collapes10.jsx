@@ -13,7 +13,7 @@ const Collapse10 = () => {
           aria-expanded={open10}
           className="faq-button1"
         >
-          Does My Puppy Have Worms & How Do I Treat Them?
+          DOES MY PUPPY HAVE WORMS & HOW DO I TREAT THEM?
         </Button>
       </div>
 

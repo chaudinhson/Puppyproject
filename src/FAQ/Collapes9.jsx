@@ -13,7 +13,7 @@ const Collapse9 = () => {
           aria-expanded={open9}
           className="faq-button1"
         >
-          How Can I Get Rid Of Dog Urine Stains & Odor?
+          HOW CAN I GET RID OF DOG URINE STAINS & ODOR?
         </Button>
       </div>
 

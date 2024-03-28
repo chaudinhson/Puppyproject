@@ -65,6 +65,7 @@
   flex-direction: column;
   border-radius: 10px;
   box-shadow: 2px 4px 10px #333333;
+  height: fit-content;
 }
 .Geobox p {
   font-size: 20px;

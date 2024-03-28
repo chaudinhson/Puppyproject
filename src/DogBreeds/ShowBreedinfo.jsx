@@ -9,7 +9,11 @@ const ShowBreedinfo = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const data = Getdata();
   if (!data) {
-    return <div>Loading...</div>; // processing when data is not available
+    return (
+      <div>
+        <span className="loader"></span>
+      </div>
+    ); // processing when data is not available
   }
   const totalPages = TOTAL_PAGES;
 

@@ -97,7 +97,7 @@ const EarsCare = () => {
                   alt=""
                   height="300px"
                 />
-                <div>
+                <div style={{ marginLeft: "10px" }}>
                   <li>
                     <span class="material-symbols-outlined paw_icon">pets</span>
                     <span>
@@ -178,7 +178,7 @@ const EarsCare = () => {
                   alt=""
                   height="200"
                 />
-                <div>
+                <div style={{ marginLeft: "10px" }}>
                   <li>
                     <span class="material-symbols-outlined paw_icon">pets</span>
                     <span>

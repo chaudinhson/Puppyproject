@@ -13,7 +13,7 @@ const Collapse13 = () => {
           aria-expanded={open13}
           className="faq-button1"
         >
-          How Do I Introduce My New Puppy To The Resident Dog?
+          HOW DO I INTRODUCE MY NEW PUPPY TO THE RESIDENT DOG?
         </Button>
       </div>
 

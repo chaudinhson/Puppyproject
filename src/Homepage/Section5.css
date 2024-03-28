@@ -23,8 +23,8 @@
   border: 1.5px solid #ffffff;
 }
 .boxtext5 > * {
-  font-size: 22px;
-  text-align: center;
+  font-size: 20px;
+  text-align: left;
   font-family: "Poppins", sans-serif;
   font-weight: lighter;
 }
