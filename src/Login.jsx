@@ -51,10 +51,10 @@ const Login = ({ show, handleClose, setLoggedInUser }) => {
       setConfirmpassword("");
     } else {
       if (!isValidSignupEmail) {
-        alert("Invalid Email");
+        alert("Invalid Email||Ex:example@example.com");
       }
       if (!isValidSignupPassword) {
-        alert("Invalid Password");
+        alert("Invalid Password||Ex:Password123");
       }
     }
   };
