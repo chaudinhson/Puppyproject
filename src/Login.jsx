@@ -39,6 +39,7 @@ const Login = ({ show, handleClose, setLoggedInUser }) => {
           })
           .then((task) => {
             // do something with the new task
+            alert("Sign up successful");
           })
           .catch((error) => {
             // handle error
